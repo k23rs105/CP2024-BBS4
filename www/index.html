@@ -436,8 +436,14 @@ function logout() {
         });
         
 }
-function btnClick(e){
+function AbtnClick(e){
     $("body").css("background-color","green");
+}
+function BbtnClick(e){
+    $("body").css("background-color","red");
+}
+function CbtnClick(e){
+    $("body").css("background-color","yellow");
 }
 
 
@@ -518,7 +524,13 @@ $(function() {
     loadPosts();
 
     $('#Abutton').click(function(e){
-        btnClick(e);
+        AbtnClick(e);
+    });
+    $('#Bbutton').click(function(e){
+        BbtnClick(e);
+    });
+    $('#Cbutton').click(function(e){
+        CbtnClick(e);
     });
 });
 
@@ -533,7 +545,9 @@ window.addEventListener('unload', function() {
 </head>
 <body>
     <div class="container">
-        <button id="Abutton">背景</button>
+        <button id="Abutton">背景1</button>
+        <button id="Bbutton">背景2</button>
+        <button id="Cbutton">背景3</button>
         <h1>掲示板アプリ</h1>
         
         <!-- メッセージ表示エリア -->
