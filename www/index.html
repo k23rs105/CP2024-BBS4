@@ -445,6 +445,9 @@ function BbtnClick(e){
 function CbtnClick(e){
     $("body").css("background-color","yellow");
 }
+function DbtnClick(e){
+    $("body").css("background-color","white");
+}
 
 
 // 認証フォームのクリア
@@ -532,6 +535,9 @@ $(function() {
     $('#Cbutton').click(function(e){
         CbtnClick(e);
     });
+    $('#Dbutton').click(function(e){
+        DbtnClick(e);
+    });
 });
 
 // クリーンアップ処理
@@ -548,6 +554,7 @@ window.addEventListener('unload', function() {
         <button id="Abutton">背景1</button>
         <button id="Bbutton">背景2</button>
         <button id="Cbutton">背景3</button>
+        <button id="Dbutton">リセット</button>
         <h1>掲示板アプリ</h1>
         
         <!-- メッセージ表示エリア -->
