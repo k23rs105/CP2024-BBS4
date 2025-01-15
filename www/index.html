@@ -434,13 +434,16 @@ function logout() {
         .catch((error) => {
             showMessage('ログアウトに失敗しました', 'error');
         });
+        
 }
+
 
 // 認証フォームのクリア
 function clearAuthForm() {
     $('#loginEmail').val('');
     $('#loginPassword').val('');
 }
+
 
 // UI更新
 // 　バグ入りなので要修正（emailアドレスを表示するべきところを uid を表示してしまっている）
@@ -484,6 +487,9 @@ $(function() {
         const contentVal = $('#contentInput').val();
         createPost(authorVal, contentVal);
     });
+    $("#postButton").css("font-family","fantasy");
+    $("#postButton").css("border-radius","50px");
+    $("#postButton").css("background-color","green");
 
     $('#loginButton').on('click', function() {
         const email = $('#loginEmail').val();
@@ -498,12 +504,19 @@ $(function() {
     });
 
     $('#logoutButton').on('click', logout);
+    $("#logoutButton").css("font-family","fantasy");
+    $("#logoutButton").css("border-radius","50px");
+    $("#logoutButton").css("background-color","red");
 
     // 投稿一覧表示順序選択
     $('#sortOrder').on('change', loadPosts);
 
     // 投稿一覧の初期読み込み
     loadPosts();
+
+    $('#Abutton').click(function(e){
+        btnClick(e);
+    });
 });
 
 // クリーンアップ処理
@@ -517,6 +530,7 @@ window.addEventListener('unload', function() {
 </head>
 <body>
     <div class="container">
+        <button id="Abutton">背景</button>
         <h1>掲示板アプリ</h1>
         
         <!-- メッセージ表示エリア -->
